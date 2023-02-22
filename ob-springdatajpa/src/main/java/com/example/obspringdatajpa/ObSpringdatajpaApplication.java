@@ -22,8 +22,7 @@ public class ObSpringdatajpaApplication {
 
         System.out.println("El num de coches en base de datos es: " + repository.count());
 
-        /*
-
+        
         // crear y almacenar un coche en base de datos
         Coche toyota = new Coche(null, "Toyota", "Prius", 2010);
         repository.save(toyota);
@@ -32,7 +31,7 @@ public class ObSpringdatajpaApplication {
 
         // recuperar todos
         System.out.println(repository.findAll());
-         */
+
 
     }
 
