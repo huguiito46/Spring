@@ -12,13 +12,14 @@ public class Ejercicio3SpringBootApplication {
 
         PersonaRepository repository = context.getBean(PersonaRepository.class);
 
-        //System.out.println(repository.count());
+        System.out.println(repository.count());
 
+        /*
         Persona persona1 = new Persona("Carlos","Gomez","92922");
         Persona persona2 = new Persona("Eva","Gomez","92121222");
         Persona persona3 = new Persona("Maria","Torres","92122");
         Persona persona4 = new Persona("Carla","Gomez","9212122");
-
+/*
         /*
         repository.save(persona1);
         repository.save(persona2);

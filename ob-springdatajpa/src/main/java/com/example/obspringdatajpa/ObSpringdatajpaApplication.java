@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 /*
 
-1) Tener el contexto que es esto
+1) Tener el context que es esto
 ApplicationContext context
 
  */
@@ -20,11 +20,24 @@ public class ObSpringdatajpaApplication {
 
         CocheRepository repository = context.getBean(CocheRepository.class);
 
-        System.out.println("El número de coches en base de datos es: " + repository.count());   // Dame un bean de la clase coche
+        System.out.println("El num de coches en base de datos es: " + repository.count());
 
+        /*
+
+        // crear y almacenar un coche en base de datos
+        Coche toyota = new Coche(null, "Toyota", "Prius", 2010);
+        repository.save(toyota);
+
+        System.out.println("El num de coches en base de datos es: " + repository.count());
+
+        // recuperar todos
+        System.out.println(repository.findAll());
+         */
 
     }
 
 }
+
+
 
 

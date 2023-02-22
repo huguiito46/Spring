@@ -1,15 +1,13 @@
 package com.example.obspringdatajpa;
 
 /*
-
 @Entity significa que va a ser una entidad esto quiere decir que esta clase va a estar en base de datos.
 @Id anotación que significa que el Long id es un ID.
 @GeneratedValue especificamos como se va a crear el id.
 (strategy = GenerationType.IDENTITY) --> Se va a generar solo los ID auto incremental
 
 JPA es una especificación de base de datos.
-
- */
+*/
 
 
 import jakarta.persistence.Entity;
@@ -20,27 +18,28 @@ import jakarta.persistence.Id;
 @Entity
 public class Coche {
 
-    // atributos encapsulados
+    // Atributos encapsulados
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String manufacturer;
-    private String model;
-    private Integer year;
+    private String fabricante;
+    private String modelo;
+    private Integer anio;
 
-    // constructores
+    // Constructores
 
-    public Coche() {
+    public Coche(){
+
     }
 
-    public Coche(Long id, String manufacturer, String model, Integer year) {
+
+    public Coche(Long id, String fabricante, String modelo, Integer anio) {
         this.id = id;
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.year = year;
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.anio = anio;
     }
 
-    // getter y setter
 
     public Long getId() {
         return id;
@@ -50,28 +49,28 @@ public class Coche {
         this.id = id;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
+    public String getFabricante() {
+        return fabricante;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
     }
 
-    public String getModel() {
-        return model;
+    public String getModelo() {
+        return modelo;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getAnio() {
+        return anio;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setAnio(Integer anio) {
+        this.anio = anio;
     }
 
     // tostring
@@ -79,9 +78,9 @@ public class Coche {
     public String toString() {
         return "Coche{" +
                 "id=" + id +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
+                ", manufacturer='" + fabricante + '\'' +
+                ", model='" + modelo + '\'' +
+                ", year=" + anio +
                 '}';
     }
 }
