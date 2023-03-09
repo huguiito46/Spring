@@ -18,15 +18,13 @@ public class EjercicioSpringRestApplication {
         Laptop pc2 = new Laptop("DEL", "INTEL", 8);
         Laptop pc3 = new Laptop("RAZER", "AMD", 32);
 
+        System.out.println("Ordenadores en la BBDD " +repository.count());
+
         repository.save(pc1);
         repository.save(pc2);
         repository.save(pc3);
-
-        System.out.println("Ordenadores en la BBDD " +repository.count());
-        System.out.println("PC1: " + pc1);
-        System.out.println("PC2: " + pc2);
-        System.out.println("PC3: " + pc3);
-
+        
+        System.out.println("Después de guardar todos los ordenadores: " + repository.findAll().size());
 
     }
 

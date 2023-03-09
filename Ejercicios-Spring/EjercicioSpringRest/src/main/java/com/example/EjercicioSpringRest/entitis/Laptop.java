@@ -1,7 +1,9 @@
 package com.example.EjercicioSpringRest.entitis;
 
 
-import jakarta.persistence.*;
+
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Laptop")
